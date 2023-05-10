@@ -1,4 +1,4 @@
-package pa1;
+package week4.pa1;
 
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;

@@ -1,4 +1,4 @@
-package listnode;
+package week4.listnode;
 
 public class ListNode {
     private Integer num;

@@ -1,9 +1,9 @@
-package listnode;
+package week4.listnode;
 
-import org.assertj.core.api.Assertions;
-import org.assertj.core.api.ThrowableAssert;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import week4.listnode.ListNode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -16,6 +16,17 @@ class ListNodeTest {
     void setUpHead() {
         for(int i=0; i<5; i++){
             head.add(head, new ListNode(ListNode.length(head) + 1), ListNode.length(head) + 1);
+        }
+    }
+
+    @AfterEach
+    void printStatus() {
+        System.out.println("테스트 종료");
+        ListNode node = head;
+        int index = 0;
+        while(node.getNextNode() != null){
+            node = node.getNextNode();
+            System.out.println(++index + "번째: " + node.getNum());
         }
     }
 
