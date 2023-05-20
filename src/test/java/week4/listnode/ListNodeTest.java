@@ -19,7 +19,7 @@ class ListNodeTest {
         }
     }
 
-    @AfterEach
+//    @AfterEach
     void printStatus() {
         System.out.println("테스트 종료");
         ListNode node = head;
